@@ -1,0 +1,19 @@
+<%- include("../partials/header") %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Add New Comment</h1>
+        <div style="width: 60%; margin: 30px auto">
+            <form action="/khojo/<%= question._id %>/comments" method="POST">
+                <div class="form-group">
+                    <label for="">Comment:</label>
+                    <input class="form-control" type="text" name="comment[text]" id="" placeholder="Text" />
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary btn-block" type="submit" placeholder="Submit!" />
+                </div>
+            </form>
+            <a href="/khojo">Go Back</a>
+        </div>
+    </div>
+</div>
+<%- include("../partials/footer") %>

@@ -1,0 +1,56 @@
+<%- include("../partials/header") %>
+<div class="container">
+  <% if(currentUser && currentUser.isTeacher) { %>
+  <h1>You have logged in as a teacher</h1>
+  <% } %>
+  <h1></h1>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="lead">
+        <a href="#">Subjects</a>
+      </div>
+      <div class="list-group">
+        <div class="active list-group-item">All Subjects</div>
+        <a class="list-group-item">Analog and Digital Electronics</a>
+        <a class="list-group-item">Data Structures</a>
+        <a class="list-group-item">Object Oriented Programming</a>
+      </div>
+      <div class="lead">
+        <a href="#">Teachers</a>
+      </div>
+      <div class="ui link list">
+        <div class="active list-group-item">Most Active Teachers</div>
+        <a class="list-group-item">Elon Musk</a>
+        <a class="list-group-item">Sundar Pichai</a>
+        <a class="list-group-item">Bill Gates</a>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="thumbnail">
+        <div class="text-right">
+          <a class="btn btn-success" href="/khojo/new">Ask A Question</a>
+        </div>
+        <br>
+        <div>
+          <% question.forEach(function(question){ %>
+          <div class="caption-full">
+            <h2 class="lead"><%= question.question %></h2>
+            <h5><a href="#"><%= question.author.username %></a></h5>
+            <span>Subject: <%= question.subject %></span>
+            <span class="pull-right"><%= question.created.toDateString() %></span>
+            <p><%- question.description.substring(0, 100) %>...</p>
+            <div>
+              <span><%= question.upvotes %></span>
+              <span><%= question.downvotes %></span>
+            </div>
+            <p><a href="/khojo/<%= question._id %>" class="btn btn-primary">More Info</a></p>
+            <hr>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("../partials/footer") %>

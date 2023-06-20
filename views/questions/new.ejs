@@ -1,0 +1,34 @@
+<%- include("../partials/header") %>
+<div class="container">
+    <div class="row">
+        <div style="width: 60%; margin: 30px auto">
+            <h2>Want to ask a question?</h2>
+            <form action="/khojo" method="POST">
+                <div class="form-group">
+                    <label>Question</label>
+                    <input class="form-control" type="text" name="question" id=""
+                        placeholder="Ask your question here..." />
+                </div>
+                <div class="form-group">
+                    <label for="content">Extra Information</label>
+                    <textarea class="form-control" name="description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <select class="form-control" name="subject">
+                        <option>Select the subject</option>
+                        <option value="General">General</option>
+                        <option value="Analog and Digital Electronics">Analog and Digital Electronics</option>
+                        <option value="Data Structures">Data Structures</option>
+                        <option value="Object Oriented Programming">Object Oriented Programming</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary btn-block" type="submit" placeholder="Submit" />
+                </div>
+            </form>
+            <a href="/khojo">Go Back</a>
+        </div>
+    </div>
+</div>
+<%- include("../partials/footer") %>

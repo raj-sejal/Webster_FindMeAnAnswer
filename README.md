@@ -19,7 +19,4 @@ children, right? In comes KHOJO
 3)Comments, UpVotes & DownVotes
 ![Screenshot_4](https://user-images.githubusercontent.com/54816974/147499069-aea4b82f-1376-42ac-a753-d1634b08b960.jpg)
 
-## Authors
 
-- [@Prabhjout](https://github.com/Prabhjout)
-- [@gdalal49](https://github.com/gdalal49)
